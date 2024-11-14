@@ -1,4 +1,7 @@
 #include <iostream>
+#include <cstdlib>
+
+
 using namespace std;
 
 bool czy_pierwsza(int n)
@@ -15,6 +18,11 @@ int main()
 {
 	int liczba;
 	cin>>liczba;
+	if(liczba <= 0)
+	{
+		cout<<"Podano liczbe niedodatnia. Program konczy dzialanie." << endl;
+		return EXIT_FAILURE;
+	}
 	cout<<"Wczytano liczbe: " << liczba << endl;
 	cout<< "Czy liczba jest pierwsza: " << (czy_pierwsza(liczba) ? "tak" : "nie") << endl;
 	return 0;
